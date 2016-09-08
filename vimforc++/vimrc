@@ -1,0 +1,61 @@
+"Basic vim config
+"01.enable line number
+set number
+
+"02.expand tab with 4 spaces
+set ts=4
+set expandtab
+set shiftwidth=4
+
+"03.enable ruler
+set ruler
+
+"04.enable fold
+set foldenable
+set foldmethod=manual
+set foldcolumn=4
+
+"05.config indent
+set autoindent
+
+"06.enable syntax light
+syntax enable
+syntax on
+
+"07.check filetype
+filetype on
+filetype plugin on
+
+"08.light current line and column
+set cursorline
+set cursorcolumn
+
+"09.display file's status on statusline
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+
+"10.light the words in tmie when partly matching
+set incsearch
+
+"11.enable bottom statusline
+set laststatus=2
+
+"12.enable showmatch
+set showmatch
+
+"13.delete continuously using backspace if there are 4+ spaces in front of cursor
+set softtabstop=4
+
+"14.define prefix about keyboard shortcuts
+let mapleader=";"
+
+"15.config taglist
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+let Tlist_WinWidth=50
+
+"16.indent association
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_start_level=2
+nmap <silent> <Leader>i <Plug>IndentGuidesToggle
+
+
